@@ -1,5 +1,5 @@
 # LC
-Inductor and capacitor filter to 2,4GHz with sky130nm
+Inductor and capacitor filter to 2.4GHz with sky130nm.
 
 LC reactance X frequency:
 
