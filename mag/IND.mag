@@ -1,0 +1,8 @@
+magic
+tech sky130A
+timestamp 1638042750
+use 1  1_0
+timestamp 1638042750
+transform 1 0 0 0 1 0
+box 0 0 19200 20000
+<< end >>

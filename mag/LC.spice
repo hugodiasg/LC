@@ -1,0 +1,8 @@
+* NGSPICE file created from LC.ext - technology: sky130A
+
+
+* Top level circuit LC
+
+C0 P2 VSUBS 537.73fF
+.end
+
