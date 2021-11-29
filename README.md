@@ -8,4 +8,4 @@ LC reactance X frequency:
 
 LC Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/143877187-23ffe600-8d
+![image](https://user-images.githubusercontent.com/80465879/143877187-23ffe600-8d6f-481b-ac79-b13c1927166a.png)
