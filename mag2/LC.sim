@@ -1,0 +1,10 @@
+| units: 500000 tech: sky130A format: MIT
+x p2 p2 l=4034 w=4034 x=10301 y=501 sky130_fd_pr__cap_mim_m3_1
+C p2 GND 394.75
+R p2 12
+= p2 l0_0/m4_8800_24400#
+= p2 XC0/c1_n2067_n2017#
+= p2 p1
+= p2 XC0/m3_n2167_n2117#
+= VSUBS XC0/VSUBS
+= VSUBS l0_0/VSUBS

@@ -1,0 +1,55 @@
+**.subckt lc_tb-impedance
+V1 net1 GND DC 0 AC 1
+V2 p1 net1 DC 0 AC 0
+x2 GND p1 GND lc_post
+**** begin user architecture code
+
+.ac lin 10k 1G 5G
+.control
+destroy all
+run
+let volt= p1
+let cur= i(v2)
+
+plot imag(volt/cur)
+plot volt/cur
+.endc
+
+
+.lib /home/hugodg/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  lc_post.sym # of pins=3
+* sym_path: /home/hugodg/projects_sky130/microelectronic/LC/xschem/lc_post.sym
+* sch_path: /home/hugodg/projects_sky130/microelectronic/LC/xschem/lc_post.sch
+.subckt lc_post  p2 p1 gnd
+*.iopin p1
+*.iopin p2
+*.iopin gnd
+L0 p1 net1 5.03n m=1
+XC0 p1 p2 sky130_fd_pr__cap_mim_m3_1 W=20.166 L=20.166 MF=1 m=1
+R net1 p2 12 m=1
+Cs2 p2 net3 62.57f m=1
+Cs1 p1 net2 61.13f m=1
+Rs1 net2 gnd 11.61 m=1
+Rs2 net3 gnd 7.031 m=1
+**** begin user architecture code
+
+R0 p2.n1 p2.n0 10.729
+R1 p2.n0 p2.t0 0.886
+R2 p2 p2.n1 0.572
+R3 p2.n1 p2.t1 0.073
+R4 p2.n0 p2 0.055
+C0 p2.t0 gnd 15.87fF
+C1 p2.n0 gnd 173.34fF $ **FLOATING
+C2 p2.t1 gnd 7.35fF
+C3 p2.n1 gnd 190.14fF $ **FLOATING
+C4 p2 gnd 402.81fF
+
+**** end user architecture code
+.ends
+
+.GLOBAL GND
+.end

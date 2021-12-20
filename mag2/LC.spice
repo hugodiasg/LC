@@ -1,0 +1,23 @@
+* NGSPICE file created from LC.ext - technology: sky130A
+
+.subckt sky130_fd_pr__cap_mim_m3_1_NUZ66F m3_n2167_n2117# c1_n2067_n2017# VSUBS
+X0 c1_n2067_n2017# m3_n2167_n2117# sky130_fd_pr__cap_mim_m3_1 l=2.017e+07u w=2.017e+07u
+C0 m3_n2167_n2117# c1_n2067_n2017# 40.40fF
+C1 m3_n2167_n2117# VSUBS 9.02fF
+.ends
+
+.subckt LC p2
+XXC0 p2 p2 VSUBS sky130_fd_pr__cap_mim_m3_1_NUZ66F
+X0 p2.t0 p2.t1 sky130_fd_pr__cap_mim_m3_1 l=0u w=0u
+R0 p2.n1 p2.n0 10.729
+R1 p2.n0 p2.t0 0.886
+R2 p2 p2.n1 0.572
+R3 p2.n1 p2.t1 0.073
+R4 p2.n0 p2 0.055
+C0 p2.t0 VSUBS 15.87fF
+C1 p2.n0 VSUBS 173.34fF $ **FLOATING
+C2 p2.t1 VSUBS 7.35fF
+C3 p2.n1 VSUBS 190.14fF $ **FLOATING
+C4 p2 VSUBS 402.81fF
+.ends
+
